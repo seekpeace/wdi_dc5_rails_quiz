@@ -4,7 +4,8 @@ class CircusesController < ApplicationController
   end
 
   def show
-
+    @circus = Circus.find(params[:id])
+    @entertainers = Entertainer.find_by(circus_id:params[:id]).all
   end
 
   def new

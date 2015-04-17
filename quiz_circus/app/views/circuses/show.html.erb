@@ -1,1 +1,14 @@
 
+<h1><%=@circus.name%></h1>
+<% @entertainers.each do |et| %>
+<%="name: #{et.name}, specialty:#{et.specialty}"%>
+<% end %>
+
+<%= link_to 'circuses', circuses_path %>
+
+edit the circuses show view to do the following:
+the show page for circus should have the following
+a link to go to the index page for all circuses(using link_to rails helper)
+the circuses name
+iterate through all of that circus's entertainers
+each entertainer should have a name and their specialty
